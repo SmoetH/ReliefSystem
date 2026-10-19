@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ReliefSystem.Mobile.Views.LoginPage"
+             Title="ReliefSystem - Login">
+
+	<VerticalStackLayout Spacing="20" Padding="30" VerticalOptions="Center">
+		<Label Text="Welcome Back" FontSize="28" FontAttributes="Bold" HorizontalOptions="Center" />
+		<Label Text="Sign in to access relief projects" FontSize="14" TextColor="Gray" HorizontalOptions="Center" Margin="0,0,0,20" />
+
+		<Entry Placeholder="Email"
+               Text="{Binding Email}"
+               Keyboard="Email" />
+
+		<Entry Placeholder="Password"
+               Text="{Binding Password}"
+               IsPassword="True" />
+
+		<Button Text="Login"
+                Command="{Binding LoginCommand}"
+                BackgroundColor="Navy"
+                TextColor="White" />
+
+		<Label Text="{Binding ErrorMessage}"
+               TextColor="Red"
+               HorizontalOptions="Center" />
+
+		<ActivityIndicator IsRunning="{Binding IsLoading}"
+                           IsVisible="{Binding IsLoading}"
+                           HorizontalOptions="Center" />
+	</VerticalStackLayout>
+</ContentPage>

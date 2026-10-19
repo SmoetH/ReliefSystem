@@ -1,0 +1,40 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Relief Operations Dashboard";
+}
+
+<div class="container mt-4">
+    <h2>XISD6329 - Relief Operations Dashboard</h2>
+
+    <div class="card p-3 my-3 shadow-sm">
+        <h4>Active Relief Projects</h4>
+        <table class="table table-bordered table-striped mt-2">
+            <thead class="table-dark">
+                <tr>
+                    <th>Project Name</th>
+                    <th>Location</th>
+                    <th>Target Budget (ZAR)</th>
+                    <th>Raised (ZAR)</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>KZN Flood Relief</td>
+                    <td>Durban, KZN</td>
+                    <td>R 500,000.00</td>
+                    <td>R 320,000.00</td>
+                    <td><span class="badge bg-success">Active</span></td>
+                </tr>
+                <tr>
+                    <td>JHB Fire Support</td>
+                    <td>JHB South</td>
+                    <td>R 150,000.00</td>
+                    <td>R 150,000.00</td>
+                    <td><span class="badge bg-secondary">Completed</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
